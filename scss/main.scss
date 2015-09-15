@@ -1,3 +1,5 @@
+@import "materialize";
+
 * {
     box-sizing: border-box;
 }
@@ -5,4 +7,38 @@
 html, body {
     padding: 0;
     margin: 0;
+    font-family: GillSans, Calibri, Trebuchet, sans-serif;
+}
+
+[app] {
+	max-width: 80%;
+	margin: auto;
+	text-align: center;
+}
+
+div {
+	width: 100%;
+	margin-top: 30px;
+}
+
+.named-person, .people {
+	width: 100%;
+}
+
+input.new-round {
+	width: 100%;
+	width: 80%;
+	max-width: 400px;
+	outline: 0;
+}
+
+.input-field {
+	position: relative;
+}
+
+.whos-round-btn {
+	width: 80%;
+	max-width: 200px;
+	margin: auto;
+	position: relative;
 }

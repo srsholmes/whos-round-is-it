@@ -6,7 +6,6 @@ let Store = Reflux.createStore({
   listenables: [Actions],
 
   init() {
-    console.log('store init');
     this.contents = {
     	chosenPerson: null,
     	people: []
@@ -19,9 +18,10 @@ let Store = Reflux.createStore({
   },
 
   onButtonClick() {
-  	var people = this.contents.people;
-  	var choice = people[Math.floor(people.length * Math.random())];
-  	people.splice(choice, 1);
+  	let people = this.contents.people;
+  	let num = Math.floor(people.length * Math.random());
+  	let choice = people[num];
+  	people.splice(num, 1);
   	this.contents = {
   		chosenPerson: choice,
     	people: people
