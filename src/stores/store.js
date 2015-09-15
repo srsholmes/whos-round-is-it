@@ -22,12 +22,10 @@ let Store = Reflux.createStore({
   	var people = this.contents.people;
   	var choice = people[Math.floor(people.length * Math.random())];
   	people.splice(choice, 1);
-
   	this.contents = {
   		chosenPerson: choice,
     	people: people
   	};
-
   	this.trigger(this.contents);
   },
 
