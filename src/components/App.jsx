@@ -26,28 +26,38 @@ let App = React.createClass({
   },
 
   render(){
+    let button, namedPerson;
     let person = this.state.chosenPerson;
     let people = this.state.people.map((person, i) => {
       return (
         <li>
-          <span>{person}</span>
+          <h5>{person}</h5>
         </li>
       )
     }, this);
+
+    if (person){
+      namedPerson = (
+        <div className="named-person">
+          <h3>This persons round:</h3>
+          <h2>🍻 {person} 🍻</h2>
+        </div>
+      )
+    }
+    if (people.length > 0) {
+      button = (<button className="whos-round-btn waves-effect waves-light btn" onClick={this.onButtonClick}>Choose person</button>);
+    }
 
     return (
       <div className="container">
         <div className="row">
           <h1>Who's round is it?</h1>
-          <div className="named-person">
-          <p>This persons round:</p>
-            <p>{person}</p>
-          </div>
+          {namedPerson}
           <div className="people">
-          <p>In the list: </p>
-           <ul>
-             {people}
-           </ul>
+            <p>In the list: </p>
+             <ul>
+               {people}
+             </ul>
           </div>
           <div className="input-field col s12">
             <input ref="roundField"
@@ -58,7 +68,7 @@ let App = React.createClass({
               id="names" type="text" class="validate" />
           </div>
           <div class="col s12">
-            <button className="whos-round-btn waves-effect waves-light btn" onClick={this.onButtonClick}>Choose person</button>
+            {button}
           </div>
         </div>
       </div>
