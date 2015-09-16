@@ -21,12 +21,16 @@ let App = React.createClass({
     }
   },
 
-  onButtonClick() {
-    Actions.buttonClick();
+  onChooseLad() {
+    Actions.chooseLad();
+  },
+
+  onClearLads() {
+    Actions.clearLads();
   },
 
   render(){
-    let button, namedPerson;
+    let button, clearButton, namedPerson;
     let person = this.state.chosenPerson;
     let people = this.state.people.map((person, i) => {
       return (
@@ -46,7 +50,8 @@ let App = React.createClass({
       )
     }
     if (people.length > 0) {
-      button = (<button className="whos-round-btn waves-effect waves-light btn" onClick={this.onButtonClick}>Choose person</button>);
+      button = (<button className="whos-round-btn waves-effect waves-light btn" onClick={this.onChooseLad}>Choose person</button>);
+      clearButton = (<button className="whos-round-btn waves-effect waves-light btn" onClick={this.onClearLads}>Clear lads</button>)
     }
 
     return (
@@ -67,8 +72,11 @@ let App = React.createClass({
               autoFocus={true}
               id="names" type="text" class="validate" />
           </div>
-          <div class="col s12">
+          <div className="col s6">
             {button}
+          </div>
+          <div className="col s6">
+            {clearButton}
           </div>
         </div>
       </div>

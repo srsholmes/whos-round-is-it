@@ -2,7 +2,8 @@ let Reflux = require('reflux');
 
 let Actions = Reflux.createActions({
   'addName' : {},
-  'buttonClick' : {}
+  'chooseLad' : {},
+  'clearLads' :{}
 });
 
 export default Actions;
