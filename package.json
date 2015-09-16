@@ -4,7 +4,8 @@
   "description": "",
   "main": "gulpfile.js",
   "scripts": {
-    "start": "gulp styles && gulp scripts && http-server -p 1337 -s -o & gulp watch"
+    "start": "gulp styles && gulp scripts && http-server -p 1337 -s -o & gulp watch",
+    "serve": "http-server"
   },
   "author": "",
   "license": "ISC",
