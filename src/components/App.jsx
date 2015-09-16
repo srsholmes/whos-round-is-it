@@ -64,12 +64,18 @@ let App = React.createClass({
         <div className="named-person">
           <h4>It's</h4>
           <h2 className="name">
-            <span className="beer-icon">🍻</span>
+            <span className="beer-icon">
+              <img src="/assets/img/beer-emoji.png"/>
+            </span>
             <span className="chosen-name">{person}'s</span>
-            <span className="beer-icon">🍻</span>
+            <span className="beer-icon">
+              <img src="/assets/img/beer-emoji.png"/>
+            </span>
           </h2>
           <h4>round!</h4>
-          <span className="beer-icon breaker">🍻</span>
+          <span className="beer-icon breaker">
+            <img src="/assets/img/beer-emoji.png"/>
+          </span>
         </div>
       )
 

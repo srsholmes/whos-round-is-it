@@ -70,7 +70,14 @@ div {
 .beer-icon {
 	font-family: 'Open Sans', sans-serif;
 	position: relative;
-	
+	width: 10%;
+	display: inline-block;
+
+	img {
+		width: 100%;
+		display: block;
+	}
+
 	&:first-child {
 		left: -10px;
 		top: 10px;
@@ -144,6 +151,7 @@ input.new-round {
 	width: 80%;
 	max-width: 400px;
 	outline: 0;
+	font-size: 1.7em;
 }
 
 .input-field {
