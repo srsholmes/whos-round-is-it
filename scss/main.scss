@@ -10,7 +10,7 @@ $screen-sm-min: 640px;
 html, body {
     padding: 0;
     margin: 0;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Passion One', cursive;
 }
 
 [app] {
@@ -25,10 +25,9 @@ html, body {
 }
 
 h1, h2, h3, h4, h5, p, span {
-	font-family: 'Impact','Open Sans', sans-serif;
+	font-family: 'Passion One', cursive;
 	// font-family: 'bebas_neuebold', 'Open Sans', sans-serif;
  	font-weight: 400;
- 	font-weight: bold;
  	text-transform: uppercase;
 }
 
@@ -103,7 +102,7 @@ div {
 		width: auto;
 		margin: 0 5px;
 		&:after {
-			font-family: 'Impact','Open Sans', sans-serif;
+			font-family: 'Passion One', cursive;
 			font-size: 30px;
 			// font-family:'bebas_neuebold', 'Open Sans', sans-serif;
 			content: ",";
