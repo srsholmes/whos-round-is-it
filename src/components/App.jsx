@@ -30,7 +30,7 @@ let App = React.createClass({
   },
 
   render(){
-    let button, clearButton, namedPerson;
+    let button, clearButton, ladTitle, namedPerson;
     let person = this.state.chosenPerson;
     let people = this.state.people.map((person, i) => {
       return (
@@ -40,18 +40,27 @@ let App = React.createClass({
       )
     }, this);
 
+    ladTitle = (`Who's a lad?`);
+
     if (person){
       namedPerson = (
         <div className="named-person">
           <h4>It's</h4>
-          <h2 className="name">🍻 {person}'s 🍻</h2>
+          <h2 className="name">
+            <span className="beer-icon">🍻</span>
+            <span className="chosen-name">{person}'s</span>
+            <span className="beer-icon">🍻</span>
+          </h2>
           <h4>round!</h4>
+          <span className="beer-icon breaker">🍻</span>
         </div>
       )
+
+      ladTitle = (`Still a lad?`);
     }
     if (people.length > 0) {
       button = (<button className="whos-round-btn waves-effect waves-light btn" onClick={this.onChooseLad}>Choose a lad</button>);
-      clearButton = (<button className="whos-round-btn waves-effect waves-light btn" onClick={this.onClearLads}>Clear the lads</button>)
+      clearButton = (<button className="whos-round-btn waves-effect waves-light btn" onClick={this.onClearLads}>Sack them off</button>)
     }
 
     return (
@@ -59,7 +68,7 @@ let App = React.createClass({
         <div className="row">
           {namedPerson}
           <div className="people">
-            <h3>Who's in?</h3>
+            <h3>{ladTitle}</h3>
              <ul>
                {people}
              </ul>
@@ -72,10 +81,10 @@ let App = React.createClass({
               autoFocus={true}
               id="names" type="text" class="validate" />
           </div>
-          <div className="col s12">
+          <div className="col s12 btn-wrap">
             {button}
           </div>
-          <div className="col s12">
+          <div className="col s12 btn-wrap">
             {clearButton}
           </div>
         </div>

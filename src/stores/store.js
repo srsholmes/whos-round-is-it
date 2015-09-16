@@ -49,7 +49,10 @@ let Store = Reflux.createStore({
   },
 
   onClearLads() {
-    this.contents.people = [];
+    this.contents = {
+      chosenPerson: null,
+      people: []
+    };
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(this.contents.people));
     this.trigger(this.contents);
   },

@@ -9,7 +9,7 @@ $screen-sm-min: 640px;
 html, body {
     padding: 0;
     margin: 0;
-    font-family: GillSans, Calibri, Trebuchet, sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 [app] {
@@ -21,6 +21,14 @@ html, body {
 	}
 }
 
+h1, h2, h3, h4, h5, p, span {
+	font-family: 'Impact','Open Sans', sans-serif;
+ 	font-weight: 400;
+ 	font-weight: bold;
+ 	text-transform: uppercase;
+}
+
+
 div {
 	width: 100%;
 	margin-top: 30px;
@@ -28,6 +36,19 @@ div {
 
 .named-person, .people {
 	width: 100%;
+}
+
+.beer-icon {
+	font-family: 'Open Sans', sans-serif;
+	margin: 0 15px;
+
+	&.breaker {
+		font-size: 60px;
+	}
+}
+
+.btn-wrap {
+	margin-top: 20px;
 }
 
 .name {
