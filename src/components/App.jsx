@@ -30,7 +30,6 @@ let App = React.createClass({
   },
 
   textShrink() {
-    console.log('textShrink');
     let textDiv = document.querySelector('.named-person');
     let textContainer = document.querySelector('.name');
     let textSpan = document.querySelector('.chosen-name');
