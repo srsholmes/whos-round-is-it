@@ -85,7 +85,7 @@ let App = React.createClass({
         <div>
           {namedPerson}
           <div className="people">
-            <h3>{ladTitle}</h3>
+            <h3 className={person == null ? 'title' : 'sub-title' }>{ladTitle}</h3>
              <ul className="the-lads">
                {people}
              </ul>
