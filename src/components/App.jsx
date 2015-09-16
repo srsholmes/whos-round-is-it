@@ -48,6 +48,8 @@ let App = React.createClass({
 
   render(){
     let button, clearButton, ladTitle, namedPerson;
+    let beerIcon = new Image();
+        beerIcon.src = '/assets/img/beer-emoji.png';
     let person = this.state.chosenPerson;
     let people = this.state.people.map((person, i) => {
       return (
@@ -65,16 +67,16 @@ let App = React.createClass({
           <h4>It's</h4>
           <h2 className="name">
             <span className="beer-icon">
-              <img src="/assets/img/beer-emoji.png"/>
+              <img src={beerIcon.src}/>
             </span>
             <span className="chosen-name">{person}'s</span>
             <span className="beer-icon">
-              <img src="/assets/img/beer-emoji.png"/>
+              <img src={beerIcon.src}/>
             </span>
           </h2>
           <h4>round!</h4>
           <span className="beer-icon breaker">
-            <img src="/assets/img/beer-emoji.png"/>
+            <img src={beerIcon.src}/>
           </span>
         </div>
       )
