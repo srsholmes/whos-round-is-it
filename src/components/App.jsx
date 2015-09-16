@@ -30,12 +30,13 @@ let App = React.createClass({
   },
 
   textShrink() {
+    console.log('textShrink');
     let textDiv = document.querySelector('.named-person');
     let textContainer = document.querySelector('.name');
     let textSpan = document.querySelector('.chosen-name');
     if (textSpan) {
       textSpan.style.fontSize = '86px';
-      while(textContainer.offsetWidth > textDiv.offsetWidth)
+      while(textContainer.offsetWidth > textDiv.offsetWidth - 120 )
       {
         textSpan.style.fontSize = parseInt(textSpan.style.fontSize) - 1 + 'px';
       }
