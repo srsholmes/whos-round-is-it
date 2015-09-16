@@ -31,7 +31,7 @@ let App = React.createClass({
     let people = this.state.people.map((person, i) => {
       return (
         <li>
-          <h5>{person}</h5>
+          <h5 className="name">{person}</h5>
         </li>
       )
     }, this);
@@ -39,8 +39,9 @@ let App = React.createClass({
     if (person){
       namedPerson = (
         <div className="named-person">
-          <h3>This persons round:</h3>
-          <h2>🍻 {person} 🍻</h2>
+          <h4>It's</h4>
+          <h2 className="name">🍻 {person}'s 🍻</h2>
+          <h4>round!</h4>
         </div>
       )
     }
@@ -51,10 +52,9 @@ let App = React.createClass({
     return (
       <div className="container">
         <div className="row">
-          <h1>Who's round is it?</h1>
           {namedPerson}
           <div className="people">
-            <p>In the list: </p>
+            <h3>Who's in?</h3>
              <ul>
                {people}
              </ul>
@@ -62,7 +62,7 @@ let App = React.createClass({
           <div className="input-field col s12">
             <input ref="roundField"
               className="new-round"
-              placeholder="Input the names of your chums"
+              placeholder="Whack in the lads names..."
               onKeyDown={this.newNameKeyDown}
               autoFocus={true}
               id="names" type="text" class="validate" />
