@@ -14,7 +14,7 @@ let App = React.createClass({
   newNameKeyDown(e) {
     if (event.keyCode !== 13) return;
     e.preventDefault();
-    var val = React.findDOMNode(this.refs.roundField).value.trim();
+    let val = React.findDOMNode(this.refs.roundField).value.trim();
     if (val) {
       Actions.addName(val);
       React.findDOMNode(this.refs.roundField).value = '';
@@ -31,20 +31,14 @@ let App = React.createClass({
 
   textShrink() {
     console.log('textShrink');
-    var textDiv = document.querySelector('.named-person');
-    var textContainer = document.querySelector('.name');
-    var textSpan = document.querySelector('.chosen-name');
-
+    let textDiv = document.querySelector('.named-person');
+    let textContainer = document.querySelector('.name');
+    let textSpan = document.querySelector('.chosen-name');
     if (textSpan) {
-      console.log('inside the if');
       textSpan.style.fontSize = '86px';
-      console.log(textSpan.style.fontSize);
-      console.log(textSpan.offsetWidth);
-      console.log(textDiv.offsetWidth);
       while(textContainer.offsetWidth > textDiv.offsetWidth)
       {
         textSpan.style.fontSize = parseInt(textSpan.style.fontSize) - 1 + 'px';
-        console.log(textSpan.style.fontSize);
       }
     }
   },
