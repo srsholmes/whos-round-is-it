@@ -84,6 +84,11 @@ div {
 
 .btn-wrap {
 	margin-top: 20px;
+	width: 35%;
+	display: inline-block;
+  @media (max-width: $screen-sm-min) {
+		width: 100%;
+	}
 }
 
 .name {
@@ -107,4 +112,5 @@ input.new-round {
 	max-width: 200px;
 	margin: auto;
 	position: relative;
+	min-width: 180px;
 }
