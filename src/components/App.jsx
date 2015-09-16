@@ -69,7 +69,7 @@ let App = React.createClass({
           {namedPerson}
           <div className="people">
             <h3>{ladTitle}</h3>
-             <ul>
+             <ul className="the-lads">
                {people}
              </ul>
           </div>

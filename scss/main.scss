@@ -52,12 +52,32 @@ div {
 	}
 }
 
+.the-lads {
+	li {
+		display: inline-block;
+		width: auto;
+		margin: 0 10px;
+		&:after {
+			font-family: 'Impact', 'bebas_neuebold', 'Open Sans', sans-serif;
+			font-size: 30px;
+			content: ",";
+		}
+
+		&:last-child {
+			&:after {
+				content: " ";
+			}
+		}
+	}
+}
+
 .btn-wrap {
 	margin-top: 20px;
 }
 
 .name {
 	text-transform: capitalize;
+	display: inline-block;
 }
 
 input.new-round {
