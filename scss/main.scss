@@ -17,13 +17,16 @@ html, body {
 	max-width: 80%;
 	margin: auto;
 	text-align: center;
+	padding-bottom: 5%;
+	padding-top: 5%;
   @media (max-width: $screen-sm-min) {
 		max-width: 100%;
 	}
 }
 
 h1, h2, h3, h4, h5, p, span {
-	font-family: 'Impact', 'bebas_neuebold', 'Open Sans', sans-serif;
+	// font-family: 'Impact', 'bebas_neuebold', 'Open Sans', sans-serif;
+	font-family: 'bebas_neuebold', 'Open Sans', sans-serif;
  	font-weight: 400;
  	font-weight: bold;
  	text-transform: uppercase;
@@ -38,8 +41,12 @@ div {
 .named-person, .people {
 	width: 100%;
 
-	h2 {
+	h2, h3 {
 		margin: auto;
+	}
+
+	h4 {
+		margin-bottom: 0;
 	}
 
 	.name {
@@ -47,30 +54,50 @@ div {
 	}
 }
 
+.named-person {
+	width: 100%;
+}
+
 .beer-icon {
 	font-family: 'Open Sans', sans-serif;
-	margin: 0 15px;
+	position: relative;
+	
+	&:first-child {
+		left: -10px;
+		top: 10px;
+	}
+
+	&:last-child {
+		right: -10px;
+		top: 10px;
+	}
 
 	&.breaker {
 		font-size: 60px;
+		position: relative;
+		margin: auto;
+		left: inherit;
+		right: inherit;
 	}
 }
 
 .chosen-name {
 	margin-top: 40px;
-	font-size: 1.9em;
+	// font-size: 1.6em;
 	position: relative;
 	top: 13px;
 }
 
 .the-lads {
+	margin-top: 0;
 	li {
 		display: inline-block;
 		width: auto;
-		margin: 0 10px;
+		margin: 0 5px;
 		&:after {
-			font-family: 'Impact', 'bebas_neuebold', 'Open Sans', sans-serif;
+			// font-family: 'Impact', 'bebas_neuebold', 'Open Sans', sans-serif;
 			font-size: 30px;
+			font-family:'bebas_neuebold', 'Open Sans', sans-serif;
 			content: ",";
 		}
 
