@@ -50,8 +50,8 @@ let App = React.createClass({
       )
     }
     if (people.length > 0) {
-      button = (<button className="whos-round-btn waves-effect waves-light btn" onClick={this.onChooseLad}>Choose person</button>);
-      clearButton = (<button className="whos-round-btn waves-effect waves-light btn" onClick={this.onClearLads}>Clear lads</button>)
+      button = (<button className="whos-round-btn waves-effect waves-light btn" onClick={this.onChooseLad}>Choose a lad</button>);
+      clearButton = (<button className="whos-round-btn waves-effect waves-light btn" onClick={this.onClearLads}>Clear the lads</button>)
     }
 
     return (
@@ -72,10 +72,10 @@ let App = React.createClass({
               autoFocus={true}
               id="names" type="text" class="validate" />
           </div>
-          <div className="col s6">
+          <div className="col s12">
             {button}
           </div>
-          <div className="col s6">
+          <div className="col s12">
             {clearButton}
           </div>
         </div>

@@ -1,5 +1,7 @@
 @import "materialize";
 
+$screen-sm-min: 640px;
+
 * {
     box-sizing: border-box;
 }
@@ -14,6 +16,9 @@ html, body {
 	max-width: 80%;
 	margin: auto;
 	text-align: center;
+  @media (max-width: $screen-sm-min) {
+		max-width: 100%;
+	}
 }
 
 div {
