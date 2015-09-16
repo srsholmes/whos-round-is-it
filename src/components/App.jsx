@@ -107,10 +107,10 @@ let App = React.createClass({
               id="names" type="text" class="validate" />
           </div>
           <div className="buttons">
-            <div className="col s12 btn-wrap">
+            <div className="btn-wrap">
               {button}
             </div>
-            <div className="col s12 btn-wrap">
+            <div className="btn-wrap">
               {clearButton}
             </div>
           </div>

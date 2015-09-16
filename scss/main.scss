@@ -133,7 +133,7 @@ div {
 .btn-wrap {
 	margin-top: 20px;
 	width: auto;
-	margin: auto 10px;
+	// margin: auto 10px;
 	display: inline-block;
   @media (max-width: $screen-sm-min) {
 		width: 100%;
@@ -161,7 +161,7 @@ input.new-round {
 .whos-round-btn {
 	width: 80%;
 	max-width: 200px;
-	margin: auto;
+	margin: auto 10px;
 	position: relative;
 	min-width: 180px;
 }
