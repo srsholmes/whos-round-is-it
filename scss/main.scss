@@ -32,11 +32,15 @@ h1, h2, h3, h4, h5, p, span {
 
 div {
 	width: 100%;
-	margin-top: 30px;
+	// margin-top: 30px;
 }
 
 .named-person, .people {
 	width: 100%;
+
+	h2 {
+		margin: auto;
+	}
 
 	.name {
 		font-size: 3.3em;
@@ -50,6 +54,13 @@ div {
 	&.breaker {
 		font-size: 60px;
 	}
+}
+
+.chosen-name {
+	margin-top: 40px;
+	font-size: 1.9em;
+	position: relative;
+	top: 13px;
 }
 
 .the-lads {
