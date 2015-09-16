@@ -22,6 +22,7 @@ let App = React.createClass({
   },
 
   onChooseLad() {
+    window.scroll(0,0);
     Actions.chooseLad();
   },
 
