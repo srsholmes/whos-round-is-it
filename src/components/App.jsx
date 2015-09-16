@@ -65,7 +65,7 @@ let App = React.createClass({
 
     return (
       <div className="container">
-        <div className="row">
+        <div>
           {namedPerson}
           <div className="people">
             <h3>{ladTitle}</h3>
