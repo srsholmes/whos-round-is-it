@@ -98,11 +98,13 @@ let App = React.createClass({
               autoFocus={true}
               id="names" type="text" class="validate" />
           </div>
-          <div className="col s12 btn-wrap">
-            {button}
-          </div>
-          <div className="col s12 btn-wrap">
-            {clearButton}
+          <div className="buttons">
+            <div className="col s12 btn-wrap">
+              {button}
+            </div>
+            <div className="col s12 btn-wrap">
+              {clearButton}
+            </div>
           </div>
         </div>
       </div>

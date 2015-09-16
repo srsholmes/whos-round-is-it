@@ -110,12 +110,18 @@ div {
 	}
 }
 
+.buttons {
+	text-align: center;
+}
+
 .btn-wrap {
 	margin-top: 20px;
-	width: 35%;
+	width: auto;
+	margin: auto 10px;
 	display: inline-block;
   @media (max-width: $screen-sm-min) {
 		width: 100%;
+		margin-top: 10px;
 	}
 }
 
