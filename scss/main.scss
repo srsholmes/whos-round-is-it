@@ -114,23 +114,10 @@ div {
 
 .the-lads {
 	margin-top: 0;
-	li {
-		display: inline-block;
-		width: auto;
-		margin: 0 5px;
-		&:after {
-			font-family: 'Passion One', cursive;
-			font-size: 30px;
-			// font-family:'bebas_neuebold', 'Open Sans', sans-serif;
-			content: ",";
-		}
-
-		&:last-child {
-			&:after {
-				content: " ";
-			}
-		}
-	}
+	display: inline-block;
+	width: auto;
+	margin: 0 5px;
+	font-size: 3.2em;
 }
 
 .buttons {
@@ -163,6 +150,7 @@ input.new-round {
 
 .input-field {
 	position: relative;
+	margin-top: 0;
 }
 
 .whos-round-btn {

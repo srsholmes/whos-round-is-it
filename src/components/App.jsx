@@ -53,13 +53,7 @@ let App = React.createClass({
     let beerIcon = new Image();
         beerIcon.src = '/assets/img/beer-emoji.png';
     let person = this.state.chosenPerson;
-    let people = this.state.people.map((person, i) => {
-      return (
-        <li>
-          <h5 className="name">{person}</h5>
-        </li>
-      )
-    }, this);
+    let people = this.state.people.join(', ');
 
     ladTitle = (`Who's a lad?`);
 
@@ -96,9 +90,7 @@ let App = React.createClass({
           {namedPerson}
           <div className="people">
             <h3 className={person == null ? 'title' : 'sub-title' }>{ladTitle}</h3>
-             <ul className="the-lads">
-               {people}
-             </ul>
+             <h5 className="the-lads">{people}</h5>
           </div>
           <div className="input-field col s12">
             <input ref="roundField"
