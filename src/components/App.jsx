@@ -106,7 +106,7 @@ let App = React.createClass({
               placeholder="Whack in the lads names..."
               onKeyDown={this.newNameKeyDown}
               autoFocus={true}
-              id="names" type="text" class="validate" />
+              id="names" type="text" className="validate" />
           </div>
           <div className="buttons">
             <div className="btn-wrap">
