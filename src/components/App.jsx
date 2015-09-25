@@ -42,10 +42,6 @@ let App = React.createClass({
   },
 
   render(){
-    let button, clearButton, ladTitle, ladTitles;
-    let person = this.state.chosenPerson;
-    let people = this.state.people.join(', ');
-
     return (
       <div className="container">
         <div>

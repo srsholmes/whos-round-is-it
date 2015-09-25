@@ -10,8 +10,11 @@ let People = React.createClass({
 
   componentWillUpdate(nextProps, nextState) {
     if (nextProps.chosenPerson !== this.props.chosenPerson) {
-      console.log('inside the if');
-      this.ladTitle = this.ladTitles[Math.floor(Math.random()*this.ladTitles.length)];   
+      if (nextProps.people.length == 0 ) {
+        this.ladTitle = 'You must be gone by now...'
+      } else {
+        this.ladTitle = this.ladTitles[Math.floor(Math.random()*this.ladTitles.length)];
+      }
     }
   },
 
