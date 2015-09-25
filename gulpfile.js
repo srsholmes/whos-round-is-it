@@ -9,8 +9,10 @@ var gulp = require('gulp'),
     source = require('vinyl-source-stream');
 
 gulp.task('scripts', function() {
-    return browserify({ debug: false })
-        .transform(babelify)
+    return browserify({ debug: true })
+        .transform(babelify.configure({
+          stage: 0
+        }))
         .transform({
             global: true,
             mangle: false

@@ -67,7 +67,7 @@ let App = React.createClass({
     return (
       <div className="container">
         <div>
-          <Person name={person}/>
+          <Person {...this.state}/>
           <div className="people">
             <h3 className={person == null ? 'title' : 'sub-title' }>{ladTitle}</h3>
              <h5 className="the-lads">{people}</h5>

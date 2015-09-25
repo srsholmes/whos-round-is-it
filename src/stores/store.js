@@ -12,7 +12,8 @@ let Store = Reflux.createStore({
     this._setupLocalStorage();
     this.contents = {
     	chosenPerson: null,
-    	people: JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY))
+    	people: JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY)),
+      drink: 'beer'
     };
   },
 
