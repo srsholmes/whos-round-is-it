@@ -2,6 +2,10 @@ let React = require('react');
 let Reflux = require('reflux');
 let Actions = require('../actions/actions');
 
+//Components
+import { Person } from './';
+
+
 //Stores
 let Store = require('../stores/store');
 
@@ -48,36 +52,13 @@ let App = React.createClass({
   },
 
   render(){
-    let button, clearButton, ladTitle, namedPerson;
-    let beerIcon = new Image();
-        beerIcon.src = '/assets/img/beer-emoji.png';
+    let button, clearButton, ladTitle, ladTitles;
     let person = this.state.chosenPerson;
     let people = this.state.people.join(', ');
-
     ladTitle = (`Who's a lad?`);
+    ladTitles = ['One more round?', 'Another?', 'Still a lad?', 'How about another?', 'Go on!', 'Feeling refreshed?', 'Pint?'];
 
-    if (person){
-      namedPerson = (
-        <div className="named-person">
-          <h4>It's</h4>
-          <h2 className="name">
-            <span className="beer-icon">
-              <img src={beerIcon.src}/>
-            </span>
-            <span className="chosen-name">{person}'s</span>
-            <span className="beer-icon">
-              <img src={beerIcon.src}/>
-            </span>
-          </h2>
-          <h4>round!</h4>
-          <span className="beer-icon breaker">
-            <img src={beerIcon.src}/>
-          </span>
-        </div>
-      )
-
-      ladTitle = (`Still a lad?`);
-    }
+    if (person) ladTitle = ladTitles[Math.floor(Math.random()*ladTitles.length)];
     if (people.length > 0) {
       button = (<button className="whos-round-btn waves-effect waves-light btn blue darken-3" onClick={this.onChooseLad}>Choose a lad</button>);
       clearButton = (<button className="whos-round-btn waves-effect waves-light btn blue darken-3" onClick={this.onClearLads}>Get rid of them</button>)
@@ -86,7 +67,7 @@ let App = React.createClass({
     return (
       <div className="container">
         <div>
-          {namedPerson}
+          <Person name={person}/>
           <div className="people">
             <h3 className={person == null ? 'title' : 'sub-title' }>{ladTitle}</h3>
              <h5 className="the-lads">{people}</h5>
