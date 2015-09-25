@@ -2,6 +2,8 @@
 @import "fonts";
 
 $screen-sm-min: 640px;
+$beer-blue: #1565C0;
+$wine-pink: #F06292;
 
 * {
     box-sizing: border-box;
@@ -33,6 +35,24 @@ h1, h2, h3, h4, h5, p, span {
  	text-transform: uppercase;
 }
 
+.container {
+	.whos-round-btn {
+		background-color: $beer-blue;
+	}
+
+	&.red-wine, &.white-wine {
+		input.new-round {
+			&:active, &:focus {
+				border-bottom: 1px solid $wine-pink !important;
+				box-shadow: 0 1px 0 0 $wine-pink !important;
+			}
+		}
+
+		.whos-round-btn {
+			background-color: $wine-pink;
+		}
+	}
+}
 
 div {
 	width: 100%;
@@ -140,6 +160,8 @@ div {
 	display: inline-block;
 }
 
+
+
 input.new-round {
 	width: 100%;
 	width: 80%;
@@ -147,8 +169,8 @@ input.new-round {
 	outline: 0;
 	font-size: 1.7em;
 	&:active, &:focus {
-		border-bottom: 1px solid #1565C0 !important;
-		box-shadow: 0 1px 0 0 #1565C0 !important;
+		border-bottom: 1px solid $beer-blue !important;
+		box-shadow: 0 1px 0 0 $beer-blue !important;
 	}
 }
 

@@ -5,6 +5,8 @@ let Actions = require('../actions/actions');
 const LOCAL_STORAGE_KEY = 'whosRoundIsIt';
 let people;
 
+let drinks = ['beer', 'red-wine', 'white-wine'];
+
 let Store = Reflux.createStore({
   listenables: [Actions],
 
@@ -47,6 +49,11 @@ let Store = Reflux.createStore({
     	people: people
   	};
   	this.trigger(this.contents);
+  },
+
+  onMixDrinks() {
+    this.contents.drink = drinks[Math.floor(Math.random() * drinks.length)];
+    this.trigger(this.contents);
   },
 
   onClearLads() {

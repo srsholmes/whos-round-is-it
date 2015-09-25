@@ -12,14 +12,19 @@ let Buttons = React.createClass({
   onClearLads() {
     Actions.clearLads();
   },
-  
+
+  onMixDrinks() {
+    Actions.mixDrinks();
+  },
+
   render(){
     let people = this.props.people;
     let button, clearButton;
+    let mixerButton = (<button className="whos-round-btn waves-effect waves-light btn" onClick={this.onMixDrinks}>Mix up the drinks</button>)
 
     if (people.length > 0) {
-      button = (<button className="whos-round-btn waves-effect waves-light btn blue darken-3" onClick={this.onChooseLad}>Choose a lad</button>);
-      clearButton = (<button className="whos-round-btn waves-effect waves-light btn blue darken-3" onClick={this.onClearLads}>Get rid of them</button>)
+      button = (<button className="whos-round-btn waves-effect waves-light btn" onClick={this.onChooseLad}>Choose a lad</button>);
+      clearButton = (<button className="whos-round-btn waves-effect waves-light btn" onClick={this.onClearLads}>Get rid of them</button>)
     }
 
     if (people.length > 0) {
@@ -31,11 +36,18 @@ let Buttons = React.createClass({
           <div className="btn-wrap">
             {clearButton}
           </div>
+          <div className="btn-wrap">
+            {mixerButton}
+          </div>
         </div>
       )
     } else {
       return (
-        <div></div>
+        <div>
+          <div className="btn-wrap">
+            {mixerButton}
+          </div>
+        </div>
       )
     }
   }

@@ -3,7 +3,8 @@ let Reflux = require('reflux');
 let Actions = Reflux.createActions({
   'addName' : {},
   'chooseLad' : {},
-  'clearLads' :{}
+  'clearLads' : {},
+  'mixDrinks': {}
 });
 
 export default Actions;
