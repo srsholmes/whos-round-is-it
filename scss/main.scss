@@ -146,6 +146,10 @@ input.new-round {
 	max-width: 400px;
 	outline: 0;
 	font-size: 1.7em;
+	&:active, &:focus {
+		border-bottom: 1px solid #1565C0 !important;
+		box-shadow: 0 1px 0 0 #1565C0 !important;
+	}
 }
 
 .input-field {

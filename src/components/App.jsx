@@ -31,7 +31,6 @@ let App = React.createClass({
   },
 
   textShrink() {
-    console.log('textShrink');
     let textDiv = document.querySelector('.named-person');
     let textContainer = document.querySelector('.name');
     let textSpan = document.querySelector('.chosen-name');
@@ -80,8 +79,8 @@ let App = React.createClass({
       ladTitle = (`Still a lad?`);
     }
     if (people.length > 0) {
-      button = (<button className="whos-round-btn waves-effect waves-light btn" onClick={this.onChooseLad}>Choose a lad</button>);
-      clearButton = (<button className="whos-round-btn waves-effect waves-light btn" onClick={this.onClearLads}>Sack them off</button>)
+      button = (<button className="whos-round-btn waves-effect waves-light btn blue darken-3" onClick={this.onChooseLad}>Choose a lad</button>);
+      clearButton = (<button className="whos-round-btn waves-effect waves-light btn blue darken-3" onClick={this.onClearLads}>Get rid of them</button>)
     }
 
     return (
@@ -94,11 +93,11 @@ let App = React.createClass({
           </div>
           <div className="input-field col s12">
             <input ref="roundField"
-              className="new-round"
+              className="new-round validate"
               placeholder="Whack in the lads names..."
               onKeyDown={this.newNameKeyDown}
               autoFocus={true}
-              id="names" type="text" className="validate" />
+              id="names" type="text"/>
           </div>
           <div className="buttons">
             <div className="btn-wrap">
