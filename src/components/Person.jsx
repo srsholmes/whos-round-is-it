@@ -4,7 +4,7 @@ let Reflux = require('reflux');
 let Person = React.createClass({
   render(){
     let beerIcon = new Image();
-        beerIcon.src = '/assets/img/beer-emoji.png';
+        beerIcon.src = '/assets/img/beer.png';
     let person = this.props.name;
     
     if (person){
@@ -21,9 +21,6 @@ let Person = React.createClass({
             </span>
           </h2>
           <h4>round!</h4>
-          <span className="beer-icon breaker">
-            <img src={beerIcon.src}/>
-          </span>
         </div>
       )
     } else {

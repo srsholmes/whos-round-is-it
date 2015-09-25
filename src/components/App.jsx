@@ -56,7 +56,7 @@ let App = React.createClass({
     let person = this.state.chosenPerson;
     let people = this.state.people.join(', ');
     ladTitle = (`Who's a lad?`);
-    ladTitles = ['One more round?', 'Another?', 'A quick one?', 'Still a lad?', 'Shots?', 'Go on...', 'Feeling refreshed?', 'Pint?'];
+    ladTitles = ['One more round?', 'Another?', 'A quick one?', 'Still a lad?', 'Shots?', 'Go on...', 'Feeling good?', 'Pint?'];
 
     if (person) ladTitle = ladTitles[Math.floor(Math.random()*ladTitles.length)];
     if (people.length > 0) {
