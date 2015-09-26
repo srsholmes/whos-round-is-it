@@ -2,12 +2,10 @@ let React = require('react');
 let Reflux = require('reflux');
 let Actions = require('../actions/actions');
 
-const LOCAL_STORAGE_KEY = 'whosRoundIsIt';
+import { LOCAL_STORAGE_KEY, DRINKS } from '../constants/constants';
 
 //Variables to work set up the app.
 let people;
-let drinks = ['beer', 'red-wine', 'white-wine'];
-let sexes = ['male', 'female', 'unisex'];
 
 let Store = Reflux.createStore({
   listenables: [Actions],
@@ -17,8 +15,7 @@ let Store = Reflux.createStore({
     this.contents = {
     	chosenPerson: null,
     	people: JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY)),
-      drink: drinks[Math.floor(Math.random() * drinks.length)],
-      sex: sexes[Math.floor(Math.random() * sexes.length)]
+      drink: null
     };
   },
 
@@ -55,7 +52,7 @@ let Store = Reflux.createStore({
   },
 
   onMixDrinks() {
-    this.contents.drink = drinks[Math.floor(Math.random() * drinks.length)];
+    this.contents.drink = DRINKS[Math.floor(Math.random() * DRINKS.length)];
     this.trigger(this.contents);
   },
 

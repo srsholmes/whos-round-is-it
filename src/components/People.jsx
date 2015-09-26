@@ -6,14 +6,14 @@ let People = React.createClass({
 //Reafactor and remove this logic from the component.
 
   componentWillMount() {
-    this.props.sex === 'male' ? this.title = (`Who's a lad?`) : this.title = (`Who's a lass?`);
+    this.props.drink === 'beer' ? this.title = (`Who's a lad?`) : this.title = (`Who's a lass?`);
     this.ladTitles = ['One more round?', 'Another?', 'A quick one?', 'Still a lad?', 'Shots?', 'Go on...', 'Feeling good?', 'Pint?'];
     this.lassTitles = ['Another glass?', 'A little top up?', 'Be naughty'];
   },
 
   componentWillUpdate(nextProps, nextState) {
     if (nextProps.chosenPerson === null) {
-      this.props.sex === 'male' ? this.title = (`Who's a lad?`) : this.title = (`Who's a lass?`);
+      this.props.drink === 'beer' ? this.title = (`Who's a lad?`) : this.title = (`Who's a lass?`);
       return;
     }
     if (nextProps.chosenPerson !== this.props.chosenPerson) {
@@ -21,7 +21,7 @@ let People = React.createClass({
         this.title = 'Oh dear...'
       } else {
         let sex;
-        this.props.sex === 'male' ? sex = this.ladTitles : sex = this.lassTitles;
+        this.props.drink === 'beer' ? sex = this.ladTitles : sex = this.lassTitles;
         this.title = sex[Math.floor(Math.random() * sex.length)];
       }
     }
