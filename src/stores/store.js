@@ -3,9 +3,11 @@ let Reflux = require('reflux');
 let Actions = require('../actions/actions');
 
 const LOCAL_STORAGE_KEY = 'whosRoundIsIt';
-let people;
 
+//Variables to work set up the app.
+let people;
 let drinks = ['beer', 'red-wine', 'white-wine'];
+let sexes = ['male', 'female', 'unisex'];
 
 let Store = Reflux.createStore({
   listenables: [Actions],
@@ -15,7 +17,8 @@ let Store = Reflux.createStore({
     this.contents = {
     	chosenPerson: null,
     	people: JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY)),
-      drink: 'beer'
+      drink: drinks[Math.floor(Math.random() * drinks.length)],
+      sex: sexes[Math.floor(Math.random() * sexes.length)]
     };
   },
 

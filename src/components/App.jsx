@@ -43,7 +43,7 @@ let App = React.createClass({
 
   render(){
     return (
-      <div className={this.state.drink + " container"}>
+      <div className={this.state.sex + " container"}>
         <div>
           <Person {...this.state}/>
           <People {...this.state}/>         
