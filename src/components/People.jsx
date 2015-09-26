@@ -28,6 +28,7 @@ let People = React.createClass({
   },
 
   render(){
+    console.log(this.props);
     let people = this.props.people.join(', ');
     let person = this.props.chosenPerson;
     return (

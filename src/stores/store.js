@@ -5,37 +5,46 @@ let Actions = require('../actions/actions');
 import { LOCAL_STORAGE_KEY, DRINKS } from '../constants/constants';
 
 //Variables to work set up the app.
-let people;
+let obj, people, drink;
 
 let Store = Reflux.createStore({
   listenables: [Actions],
 
   init() {
     this._setupLocalStorage();
-    this.contents = {
-    	chosenPerson: null,
-    	people: JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY)),
-      drink: null
-    };
   },
 
   _setupLocalStorage() {
+    //Set up the object
+    this.contents = {
+      chosenPerson: null,
+      people: [],
+      drink: null
+    };
+
+    console.log(localStorage.getItem(LOCAL_STORAGE_KEY));
+    //If there is no local storage, set it to the empty this.contents.
+    //Otherwise get the obj from local storage.
     if (localStorage.getItem(LOCAL_STORAGE_KEY) === null) {
-      people = [];
+      localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(this.contents)); 
     } else {
-      people = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
+      this.contents = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
     }
-    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(people));
-    people.push(JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY)));
   },
 
-  _updatePeople(people) {
-    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(people));
+  _updateLocalStorage(obj) {
+    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(obj));
+  },
+
+  onChooseDrink(drink) {
+    this.contents.drink = DRINKS[drink];
+    this._updateLocalStorage(this.contents);
+    this.trigger(this.contents);
   },
 
   onAddName(name) {
   	this.contents.people.push(name);
-    this._updatePeople(this.contents.people);
+    this._updateLocalStorage(this.contents);
   	this.trigger(this.contents);
   },
 
@@ -59,9 +68,10 @@ let Store = Reflux.createStore({
   onClearLads() {
     this.contents = {
       chosenPerson: null,
-      people: []
+      people: [], 
+      drink: null
     };
-    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(this.contents.people));
+    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(this.contents));
     this.trigger(this.contents);
   },
 

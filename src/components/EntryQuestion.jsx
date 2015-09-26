@@ -7,8 +7,8 @@ import { DRINKS } from '../constants/constants';
 
 let EntryQuestion = React.createClass({
 
-  chooseDrink() {
-    console.log('chooseDrink');
+  chooseDrink(i) {
+    Actions.chooseDrink(i);
   },
 
   render(){
@@ -17,7 +17,7 @@ let EntryQuestion = React.createClass({
 
     let entryButtons = DRINKS.map((drink, i) => {
       return (
-        <button refs={drink} onClick={this.chooseDrink} className={ drink + ' whos-round-btn choose-drink-icon waves-effect waves-light btn'}>{drink}</button>
+        <button onClick={this.chooseDrink.bind(null, i)} className={ drink + ' whos-round-btn choose-drink-btn waves-effect waves-light btn'}>{drink}</button>
       )
     }, this);
     

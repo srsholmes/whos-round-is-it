@@ -35,12 +35,13 @@ h1, h2, h3, h4, h5, p, span {
  	text-transform: uppercase;
 }
 
+
 .container {
 	.whos-round-btn {
 		background-color: $beer-blue;
 	}
 
-	&.female {
+	&.red-wine, &.white-wine {
 		input.new-round {
 			&:active, &:focus {
 				border-bottom: 1px solid $wine-pink !important;
@@ -189,4 +190,7 @@ input.new-round {
 	margin: auto 10px;
 	position: relative;
 	min-width: 180px;
+	&.choose-drink-btn {
+		margin-top: 10px;
+	}
 }

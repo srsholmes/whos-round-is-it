@@ -4,7 +4,8 @@ let Actions = Reflux.createActions({
   'addName' : {},
   'chooseLad' : {},
   'clearLads' : {},
-  'mixDrinks': {}
+  'mixDrinks': {},
+  'chooseDrink': {}
 });
 
 export default Actions;
