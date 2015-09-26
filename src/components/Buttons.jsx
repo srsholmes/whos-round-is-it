@@ -19,12 +19,12 @@ let Buttons = React.createClass({
 
   render(){
     let people = this.props.people;
-    let button, clearButton;
-    let mixerButton = (<button className="whos-round-btn waves-effect waves-light btn" onClick={this.onMixDrinks}>Mix up the drinks</button>)
+    let button, clearButton, mixerButton;
 
     if (people.length > 0) {
       button = (<button className="whos-round-btn waves-effect waves-light btn" onClick={this.onChooseLad}>Choose a lad</button>);
-      clearButton = (<button className="whos-round-btn waves-effect waves-light btn" onClick={this.onClearLads}>Get rid of them</button>)
+      clearButton = (<button className="whos-round-btn waves-effect waves-light btn" onClick={this.onClearLads}>Get rid of them</button>);
+      mixerButton = (<button className="whos-round-btn waves-effect waves-light btn" onClick={this.onMixDrinks}>Mix up the drinks</button>);
     }
 
     if (people.length > 0) {
@@ -43,11 +43,7 @@ let Buttons = React.createClass({
       )
     } else {
       return (
-        <div>
-          <div className="btn-wrap">
-            {mixerButton}
-          </div>
-        </div>
+        <div></div>
       )
     }
   }

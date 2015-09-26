@@ -11,25 +11,16 @@ let Store = Reflux.createStore({
   listenables: [Actions],
 
   init() {
-    this._setupLocalStorage();
-  },
-
-  _setupLocalStorage() {
-    //Set up the object
     this.contents = {
       chosenPerson: null,
       people: [],
       drink: null
     };
+    this._setupLocalStorage();
+  },
 
-    console.log(localStorage.getItem(LOCAL_STORAGE_KEY));
-    //If there is no local storage, set it to the empty this.contents.
-    //Otherwise get the obj from local storage.
-    if (localStorage.getItem(LOCAL_STORAGE_KEY) === null) {
-      localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(this.contents)); 
-    } else {
-      this.contents = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
-    }
+  _setupLocalStorage() {
+    localStorage.getItem(LOCAL_STORAGE_KEY) === null ? localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(this.contents)) : this.contents = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
   },
 
   _updateLocalStorage(obj) {
@@ -61,7 +52,11 @@ let Store = Reflux.createStore({
   },
 
   onMixDrinks() {
-    this.contents.drink = DRINKS[Math.floor(Math.random() * DRINKS.length)];
+    this.contents = {
+      chosenPerson: null,
+      people: this.contents.people, 
+      drink: null
+    };
     this.trigger(this.contents);
   },
 
@@ -69,7 +64,7 @@ let Store = Reflux.createStore({
     this.contents = {
       chosenPerson: null,
       people: [], 
-      drink: null
+      drink: this.contents.drink
     };
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(this.contents));
     this.trigger(this.contents);
