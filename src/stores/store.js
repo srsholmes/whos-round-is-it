@@ -46,7 +46,8 @@ let Store = Reflux.createStore({
   	people.splice(num, 1);
   	this.contents = {
   		chosenPerson: choice,
-    	people: people
+    	people: people,
+      drink: this.contents.drink
   	};
   	this.trigger(this.contents);
   },
