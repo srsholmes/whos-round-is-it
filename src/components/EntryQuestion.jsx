@@ -2,8 +2,7 @@ let React = require('react');
 let Reflux = require('reflux');
 let Actions = require('../actions/actions');
 
-import { DRINKS } from '../constants/constants';
-
+import { DRINKS, PHRASES } from '../constants/constants';
 
 let EntryQuestion = React.createClass({
 
@@ -23,7 +22,7 @@ let EntryQuestion = React.createClass({
     
     return (
       <div>
-        <h1>What do you fancy?</h1>
+        <h1 className="title">{ PHRASES.Entry.title }</h1>
         {entryButtons}
       </div>
     )

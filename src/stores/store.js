@@ -4,9 +4,6 @@ let Actions = require('../actions/actions');
 
 import { LOCAL_STORAGE_KEY, DRINKS } from '../constants/constants';
 
-//Variables to work set up the app.
-let obj, people, drink;
-
 let Store = Reflux.createStore({
   listenables: [Actions],
 
@@ -27,8 +24,8 @@ let Store = Reflux.createStore({
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(obj));
   },
 
-  onChooseDrink(drink) {
-    this.contents.drink = DRINKS[drink];
+  onChooseDrink(i) {
+    this.contents.drink = DRINKS[i];
     this._updateLocalStorage(this.contents);
     this.trigger(this.contents);
   },
@@ -58,6 +55,7 @@ let Store = Reflux.createStore({
       people: this.contents.people, 
       drink: null
     };
+    this._updateLocalStorage(this.contents);
     this.trigger(this.contents);
   },
 
@@ -67,7 +65,7 @@ let Store = Reflux.createStore({
       people: [], 
       drink: this.contents.drink
     };
-    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(this.contents));
+    this._updateLocalStorage(this.contents);
     this.trigger(this.contents);
   },
 
