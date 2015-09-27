@@ -5,8 +5,13 @@ const PHRASES = {
 	Entry: {
 		title: 'What do you fancy?'
 	},
-	Beer: {
-		title: `Who's a lad`
+	beer: {
+		title: `Who's a lad`,
+		continueRound: ['One more round?', 'Another?', 'A quick one?', 'Still a lad?', 'Shots?', 'Go on...', 'Feeling good?', 'Pint?']
+	},
+	wine: {
+		title: `Who's a lass`,
+		continueRound: ['Another glass?', 'A little top up?', 'Be naughty']
 	}
 };
 

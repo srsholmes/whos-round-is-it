@@ -1,28 +1,29 @@
 let React = require('react');
 let Reflux = require('reflux');
 
+import { PHRASES } from '../constants/constants';
+
+
 let People = React.createClass({
 
-//Reafactor and remove this logic from the component.
+//Refactor and remove this logic from the component.
 
   componentWillMount() {
-    this.props.drink === 'beer' ? this.title = (`Who's a lad?`) : this.title = (`Who's a lass?`);
-    this.ladTitles = ['One more round?', 'Another?', 'A quick one?', 'Still a lad?', 'Shots?', 'Go on...', 'Feeling good?', 'Pint?'];
-    this.lassTitles = ['Another glass?', 'A little top up?', 'Be naughty'];
+    let drink = this.props.drink;
+    this.title = PHRASES[drink].title;
   },
 
   componentWillUpdate(nextProps, nextState) {
+    let drink = this.props.drink;
     if (nextProps.chosenPerson === null) {
-      this.props.drink === 'beer' ? this.title = (`Who's a lad?`) : this.title = (`Who's a lass?`);
+      this.title = PHRASES[drink].title;
       return;
     }
     if (nextProps.chosenPerson !== this.props.chosenPerson) {
       if (nextProps.people.length === 0 && nextProps.chosenPerson !== null ) {
         this.title = 'Oh dear...'
       } else {
-        let sex;
-        this.props.drink === 'beer' ? sex = this.ladTitles : sex = this.lassTitles;
-        this.title = sex[Math.floor(Math.random() * sex.length)];
+        this.title = PHRASES[drink].continueRound[Math.floor(Math.random() * PHRASES[drink].continueRound.length)];
       }
     }
   },
