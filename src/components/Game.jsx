@@ -15,7 +15,15 @@ let Game = React.createClass({
     e.preventDefault();
     let val = React.findDOMNode(this.refs.roundField).value.trim();
     if (val) {
-      Actions.addName(val);
+      if (val.indexOf(',') > -1 || val.indexOf(' ') > -1 ) {
+        var arr = val.split(/[ ,]+/);
+        arr.map((i, el) => {
+          console.log(i);
+          Actions.addName(i);
+        });
+      } else {
+        Actions.addName(val);
+      }
       React.findDOMNode(this.refs.roundField).value = '';
     }
   },
