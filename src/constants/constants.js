@@ -7,10 +7,12 @@ const PHRASES = {
 	},
 	beer: {
 		title: `Who's a lad`,
+		chooseButton: 'Choose a lad',
 		continueRound: ['One more round?', 'Another?', 'A quick one?', 'Still a lad?', 'Shots?', 'Go on...', 'Feeling good?', 'Pint?']
 	},
 	wine: {
 		title: `Who's a lass`,
+		chooseButton: 'Choose a lass',
 		continueRound: ['Another glass?', 'A little top up?', 'Be naughty']
 	}
 };

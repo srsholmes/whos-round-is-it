@@ -6,8 +6,6 @@ import { PHRASES } from '../constants/constants';
 
 let People = React.createClass({
 
-//Refactor and remove this logic from the component.
-
   componentWillMount() {
     let drink = this.props.drink;
     this.title = PHRASES[drink].title;

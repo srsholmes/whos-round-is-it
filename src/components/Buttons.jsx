@@ -2,6 +2,8 @@ let React = require('react');
 let Reflux = require('reflux');
 let Actions = require('../actions/actions');
 
+import { PHRASES } from '../constants/constants';
+
 let Buttons = React.createClass({
 
   onChooseLad() {
@@ -20,10 +22,12 @@ let Buttons = React.createClass({
   render(){
     let people = this.props.people;
     let chooseButton, clearButton, mixerButton;
+    let drink = this.props.drink;
+
     if (people.length > 0) {
       chooseButton = (
         <button className="whos-round-btn waves-effect waves-light btn" onClick={this.onChooseLad}>
-          {this.props.drink === 'beer' ? `Choose a lad` : `Choose a lass`}
+          {PHRASES[drink].chooseButton}
         </button>
       );
       clearButton = (<button className="whos-round-btn waves-effect waves-light btn" onClick={this.onClearLads}>Get rid of them</button>);
