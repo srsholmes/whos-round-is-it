@@ -3,6 +3,7 @@ let Reflux = require('reflux');
 
 import { PHRASES } from '../constants/constants';
 
+import { chooseRandom } from '../modules';
 
 let People = React.createClass({
 
@@ -21,7 +22,7 @@ let People = React.createClass({
       if (nextProps.people.length === 0 && nextProps.chosenPerson !== null ) {
         this.title = 'Oh dear...'
       } else {
-        this.title = PHRASES[drink].continueRound[Math.floor(Math.random() * PHRASES[drink].continueRound.length)];
+        this.title = chooseRandom(PHRASES[drink].continueRound);
       }
     }
   },
