@@ -6,7 +6,7 @@ let Person = React.createClass({
     let drinkIcon = new Image();
     let drink = this.props.drink;
     let person = this.props.chosenPerson;
-    drinkIcon.src = `/assets/img/${drink}.png`;
+    drinkIcon.src = `/assets/img/${drink}.jpg`;
     if (person){
       return (
         <div className="named-person">
