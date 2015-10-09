@@ -20,7 +20,7 @@ const PHRASES = {
 		continueRound: [`Another glass?`, `A little top up?`, `Be naughty`, 'It\'s not done yet']
 	},
 	shots: {
-		title: `Brave...`,
+		title: `Shots?`,
 		endTitle: 'You\'re probably drunk...',
 		placeholder: 'Who\'s going to play?',
 		chooseButton: `Man up`,
