@@ -7,8 +7,9 @@ let Person = React.createClass({
     let drink = this.props.drink;
     let person = this.props.chosenPerson;
 
-    if (drink ==='wine') {
-      let drinks = ['red-wine', 'white-wine'];
+    if (drink ==='wine' || drink === 'cocktails') {
+      let drinks;
+      drink === 'wine' ? drinks = ['red-wine', 'white-wine'] : drinks = ['cocktails-00', 'cocktails-01', 'cocktails-02'];
       drinkIcon.src = `/assets/img/${drinks[Math.floor(Math.random()*drinks.length)]}.jpg`;
     } else {
       drinkIcon.src = `/assets/img/${drink}.jpg`;
