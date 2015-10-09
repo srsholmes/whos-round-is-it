@@ -1,5 +1,5 @@
 const LOCAL_STORAGE_KEY = `whosRoundIsIt`;
-const DRINKS = [`beer`, `wine`, 'whiskey', 'cocktails'];
+const DRINKS = [`beer`, `wine`, 'whiskey', 'cocktails', 'champagne'];
 
 const PHRASES = {
 	Entry: {
@@ -13,7 +13,7 @@ const PHRASES = {
 	wine: {
 		title: `Who's a lass?`,
 		chooseButton: `Choose a lass`,
-		continueRound: [`Another glass?`, `A little top up?`, `Be naughty`]
+		continueRound: [`Another glass?`, `A little top up?`, `Be naughty`, 'It\'s not done yet']
 	},
 	whiskey: {
 		title: `Strong.`,
@@ -23,7 +23,12 @@ const PHRASES = {
 	cocktails: {
 		title: `Cocktails...`,
 		chooseButton: `Go on then`,
-		continueRound: [`Change it up?`, `One more?`, `Happy hour?`, 'Refreshing']
+		continueRound: [`Change it up?`, `One more?`, `Happy hour?`, 'Refreshing', 'Spend more money?']
+	},
+	champagne: {
+		title: `Flashy git.`,
+		chooseButton: `Clear out my bank`,
+		continueRound: [`Spend more money?`, `Another bottle?`, `Drunk or rich?`, 'Refreshing']
 	}
 };
 
