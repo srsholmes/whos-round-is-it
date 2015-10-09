@@ -6,7 +6,13 @@ let Person = React.createClass({
     let drinkIcon = new Image();
     let drink = this.props.drink;
     let person = this.props.chosenPerson;
-    drinkIcon.src = `/assets/img/${drink}.jpg`;
+
+    if (drink ==='wine') {
+      let drinks = ['red-wine', 'white-wine'];
+      drinkIcon.src = `/assets/img/${drinks[Math.floor(Math.random()*drinks.length)]}.jpg`;
+    } else {
+      drinkIcon.src = `/assets/img/${drink}.jpg`;
+    }
     if (person){
       return (
         <div className="named-person">
