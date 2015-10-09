@@ -5,13 +5,16 @@ let Actions = require('../actions/actions');
 //Components
 import { Person, People, Buttons } from './';
 
+import { PHRASES } from '../constants/constants';
+
+
 //Stores
 let Store = require('../stores/store');
 
 let Game = React.createClass({
 
   newNameKeyDown(e) {
-    if (event.type === 'blur' || event.keyCode == 13) {
+    if (event.type === 'blur' || event.keyCode === 13) {
       e.preventDefault();
       let val = React.findDOMNode(this.refs.roundField).value.trim();
       if (val) {
@@ -58,7 +61,7 @@ let Game = React.createClass({
           <div className="input-field col s12">
             <input ref="roundField"
               className="new-round validate"
-              placeholder="Whack in the lads names..."
+              placeholder={PHRASES[this.props.drink].placeholder}
               onKeyDown={this.newNameKeyDown}
               onBlur={this.newNameKeyDown}
               autoFocus={true}
