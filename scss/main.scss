@@ -5,7 +5,7 @@ $screen-sm-min: 640px;
 $beer-blue: #1565C0;
 $wine-pink: #F06292;
 $whiskey-orange: #FB8C00;
-$cocktails-green: #388E3C;
+$cocktails-purple: #7E57C2;
 
 * {
     box-sizing: border-box;
@@ -64,13 +64,13 @@ h1, h2, h3, h4, h5, p, span {
 	&.cocktails {
 		input.new-round {
 			&:active, &:focus {
-				border-bottom: 1px solid $cocktails-green !important;
-				box-shadow: 0 1px 0 0 $cocktails-green !important;
+				border-bottom: 1px solid $cocktails-purple !important;
+				box-shadow: 0 1px 0 0 $cocktails-purple !important;
 			}
 		}
 
 		.whos-round-btn {
-			background-color: $cocktails-green;
+			background-color: $cocktails-purple;
 		}
 	}
 

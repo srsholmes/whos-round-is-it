@@ -3,7 +3,7 @@ const DRINKS = [`beer`, `wine`, 'whiskey', 'cocktails'];
 
 const PHRASES = {
 	Entry: {
-		title: [`Fancy a drink?`, `Thirsty?`, `Pint?`, `Feeling parched?`, `What's your posion?`, 'Drink?' ]
+		title: [`Fancy a drink?`, `Thirsty?`, `Pint?`, `Feeling parched?`, `What's your posion?`, 'Drink?', 'Choose a drink' ]
 	},
 	beer: {
 		title: `Who's a lad?`,
@@ -16,14 +16,14 @@ const PHRASES = {
 		continueRound: [`Another glass?`, `A little top up?`, `Be naughty`]
 	},
 	whiskey: {
-		title: `The strong stuff...`,
-		chooseButton: `Be a man`,
+		title: `Strong.`,
+		chooseButton: `Man up`,
 		continueRound: [`Another one?`, `Keep going?`, `Dont stop now...`]
 	},
 	cocktails: {
-		title: `Cocktails eh...`,
+		title: `Cocktails...`,
 		chooseButton: `Go on then`,
-		continueRound: [`Something different next time?`, `One more?`, `Is it happy hour?`]
+		continueRound: [`Change it up?`, `One more?`, `Happy hour?`, 'Refreshing']
 	}
 };
 
