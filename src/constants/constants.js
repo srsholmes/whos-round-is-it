@@ -7,7 +7,7 @@ const PHRASES = {
 	},
 	beer: {
 		title: `Who's a lad?`,
-		endTitle: 'Oh dear...',
+		endTitle: 'Be more laddy...',
 		placeholder: 'Whack in the lads names...',
 		chooseButton: `Choose a lad`,
 		continueRound: [`One more round?`, `Cheeky pint?`, `Another?`, `A quick one?`, `Still a lad?`, `Shots?`, `Go on...`, `Feeling good?`, `Pint?`]
@@ -28,7 +28,7 @@ const PHRASES = {
 	},
 	cocktails: {
 		title: `Cocktails?`,
-		endTitle: 'I want another one!',
+		endTitle: 'Again!',
 		placeholder: 'Who fancies a cocktail?',
 		chooseButton: `Go on then`,
 		continueRound: [`Change it up?`, `One more?`, `Happy hour?`, 'Refreshing', 'Spend more money?']
