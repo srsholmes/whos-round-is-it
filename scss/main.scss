@@ -160,6 +160,19 @@ div {
 		right: 0;
 	}
 
+	
+  @media (max-width: $screen-sm-min) {
+		width: 46%;
+		max-width: 440px;
+		&:first-child {
+			left: -50px;
+		}
+
+		&:last-child {
+			right: -50px;
+		}
+	}
+
 	&.breaker {
 		font-size: 60px;
 		top: -10px;
