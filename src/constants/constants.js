@@ -33,7 +33,7 @@ const PHRASES = {
 		title: `Flashy git.`,
 		endTitle: 'Any money left?',
 		chooseButton: `Clear out my bank`,
-		continueRound: [`Spend more money?`, `Another bottle?`, `Drunk or rich?`, 'Refreshing']
+		continueRound: [`Spend more money?`, `Another bottle?`, `Drunk or rich?`, 'Refreshing...', 'more!']
 	}
 };
 
