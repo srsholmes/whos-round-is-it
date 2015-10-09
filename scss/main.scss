@@ -152,23 +152,23 @@ div {
 		display: block;
 	}
 
-	&:first-child {
+	&.left {
 		left: 0;
 	}
 
-	&:last-child {
+	&.right {
 		right: 0;
 	}
 
-	
+
   @media (max-width: $screen-sm-min) {
 		width: 46%;
 		max-width: 440px;
-		&:first-child {
+		&.left {
 			left: -50px;
 		}
 
-		&:last-child {
+		&.right {
 			right: -50px;
 		}
 	}
