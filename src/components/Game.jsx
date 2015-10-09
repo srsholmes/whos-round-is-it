@@ -11,20 +11,22 @@ let Store = require('../stores/store');
 let Game = React.createClass({
 
   newNameKeyDown(e) {
-    if (event.keyCode !== 13) return;
-    e.preventDefault();
-    let val = React.findDOMNode(this.refs.roundField).value.trim();
-    if (val) {
-      if (/[ ,]+/.test(val)) {
-        var arr = val.split(/[ ,]+/);
-        arr.map((i, el) => {
-          Actions.addName(i);
-        });
-      } else {
-        Actions.addName(val);
+    console.log(e);
+    if (event.type === 'blur' || event.keyCode == 13) {
+      e.preventDefault();
+      let val = React.findDOMNode(this.refs.roundField).value.trim();
+      if (val) {
+        if (/[ ,]+/.test(val)) {
+          var arr = val.split(/[ ,]+/);
+          arr.map((i, el) => {
+            Actions.addName(i);
+          });
+        } else {
+          Actions.addName(val);
+        }
+        React.findDOMNode(this.refs.roundField).value = '';
       }
-      React.findDOMNode(this.refs.roundField).value = '';
-    }
+    }    
   },
 
   textShrink() {
@@ -59,6 +61,7 @@ let Game = React.createClass({
               className="new-round validate"
               placeholder="Whack in the lads names..."
               onKeyDown={this.newNameKeyDown}
+              onBlur={this.newNameKeyDown}
               autoFocus={true}
               id="names" type="text"/>
           </div>
