@@ -25,6 +25,8 @@ let Person = React.createClass({
         case 'shots':
             drinks = ['shots-00', 'shots-01'];
             break;
+        default:
+            drinks = ['beer'];
       }
       drinkIcon.src = `/assets/img/${drinks[Math.floor(Math.random()*drinks.length)]}.jpg`;
     } else {
