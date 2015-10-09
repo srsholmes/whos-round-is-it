@@ -29,9 +29,7 @@ gulp.task('scripts', function() {
 
 gulp.task('styles', function() {
     return gulp.src(['./scss/**/*.scss'])
-        .pipe(sass({
-            sourceComments: 'map'
-        }))
+        .pipe(sass())
         .pipe(prefix({
             browsers: ['> 1%', 'last 3 versions', 'ie 8']
         }))
