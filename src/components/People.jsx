@@ -20,7 +20,7 @@ let People = React.createClass({
     }
     if (nextProps.chosenPerson !== this.props.chosenPerson) {
       if (nextProps.people.length === 0 && nextProps.chosenPerson !== null ) {
-        this.title = 'Oh dear...'
+        this.title = PHRASES[drink].endTitle;
       } else {
         this.title = chooseRandom(PHRASES[drink].continueRound);
       }
