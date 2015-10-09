@@ -30,7 +30,7 @@ const PHRASES = {
 		continueRound: [`Change it up?`, `One more?`, `Happy hour?`, 'Refreshing', 'Spend more money?']
 	},
 	champagne: {
-		title: `Flashy git.`,
+		title: `Celebrating?`,
 		endTitle: 'Any money left?',
 		chooseButton: `Clear out my bank`,
 		continueRound: [`Spend more money?`, `Another bottle?`, `Drunk or rich?`, 'Refreshing...', 'more!']
