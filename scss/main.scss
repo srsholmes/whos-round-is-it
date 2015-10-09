@@ -29,6 +29,7 @@ html, body {
 	padding-bottom: 5%;
 	padding-top: 5%;
 	max-width: 1000px;
+	overflow: hidden;
   @media (max-width: $screen-sm-min) {
 		max-width: 100%;
 		width: 100%;
