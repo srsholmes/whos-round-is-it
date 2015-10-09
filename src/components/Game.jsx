@@ -11,7 +11,6 @@ let Store = require('../stores/store');
 let Game = React.createClass({
 
   newNameKeyDown(e) {
-    console.log(e);
     if (event.type === 'blur' || event.keyCode == 13) {
       e.preventDefault();
       let val = React.findDOMNode(this.refs.roundField).value.trim();
