@@ -11,13 +11,15 @@ let Store = Reflux.createStore({
     this.contents = {
       chosenPerson: null,
       people: [],
-      drink: null
+      drink: null,
+      dataCheck: true
     };
     this._setupLocalStorage();
   },
 
   _setupLocalStorage() {
-    localStorage.getItem(LOCAL_STORAGE_KEY) === null ? localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(this.contents)) : this.contents = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
+    let localStorageItem = localStorage.getItem(LOCAL_STORAGE_KEY);
+    localStorageItem === null || JSON.parse(localStorageItem).dataCheck !== true ? localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(this.contents)) : this.contents = JSON.parse(localStorageItem);
   },
 
   _updateLocalStorage(obj) {
@@ -53,7 +55,8 @@ let Store = Reflux.createStore({
     this.contents = {
       chosenPerson: null,
       people: this.contents.people, 
-      drink: null
+      drink: null,
+      dataCheck: true
     };
     this._updateLocalStorage(this.contents);
     this.trigger(this.contents);
@@ -63,7 +66,8 @@ let Store = Reflux.createStore({
     this.contents = {
       chosenPerson: null,
       people: [], 
-      drink: this.contents.drink
+      drink: this.contents.drink,
+      dataCheck: true
     };
     this._updateLocalStorage(this.contents);
     this.trigger(this.contents);
