@@ -19,9 +19,13 @@ let Buttons = React.createClass({
     Actions.mixDrinks();
   },
 
+  onNewRound() {
+    Actions.newRound();
+  },
+
   render(){
     let people = this.props.people;
-    let chooseButton, clearButton, mixerButton;
+    let chooseButton, clearButton, mixerButton, newRoundButton;
     let drink = this.props.drink;
 
     if (people.length > 0) {
@@ -30,8 +34,12 @@ let Buttons = React.createClass({
           {PHRASES[drink].chooseButton}
         </button>
       );
-      clearButton = (<button className="whos-round-btn waves-effect waves-light btn" onClick={this.onClearLads}>Get rid of them</button>);
+      clearButton = (<button className="whos-round-btn waves-effect waves-light btn" onClick={this.onClearLads}>Clear people</button>);
       mixerButton = (<button className="whos-round-btn waves-effect waves-light btn" onClick={this.onMixDrinks}>Mix up the drinks</button>);
+    }
+
+    if (people.length === 0 && this.props.group.length > 0) {
+      newRoundButton = (<button className="whos-round-btn waves-effect waves-light btn" onClick={this.onNewRound}>Another round</button>);
     }
 
     if (people.length > 0) {
@@ -50,7 +58,9 @@ let Buttons = React.createClass({
       )
     } else {
       return (
-        <div></div>
+        <div className="buttons">
+          {newRoundButton}
+        </div>
       )
     }
   }
