@@ -34,6 +34,7 @@ let Store = Reflux.createStore({
   },
 
   onAddName(name) {
+    console.log('onAddName');
   	this.contents.people.push(name);
     this.contents.group.push(name);
     this._updateLocalStorage(this.contents);

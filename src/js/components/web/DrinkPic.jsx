@@ -28,9 +28,9 @@ let Person = React.createClass({
         default:
             drinks = ['beer'];
       }
-      drinkIcon.src = `/assets/img/${drinks[Math.floor(Math.random()*drinks.length)]}.jpg`;
+      drinkIcon.src = `/img/${drinks[Math.floor(Math.random()*drinks.length)]}.jpg`;
     } else {
-      drinkIcon.src = `/assets/img/${drink}.jpg`;
+      drinkIcon.src = `/img/${drink}.jpg`;
     }
     return (
       <div>

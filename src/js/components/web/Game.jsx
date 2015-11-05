@@ -7,16 +7,12 @@ import { Person, People, Buttons } from './';
 
 import { PHRASES } from '../../constants/constants';
 
-
-//Stores
-let Store = require('../../stores/store');
-
 let Game = React.createClass({
 
   newNameKeyDown(e) {
-    if (event.type === 'blur' || event.keyCode === 13) {
+    if (event.type === 'react-blur' || e.which === 13) {
       e.preventDefault();
-      let val = React.findDOMNode(this.refs.roundField).value.trim();
+      let val = this.refs.roundField.value.trim();
       if (val) {
         if (/[ ,]+/.test(val)) {
           var arr = val.split(/[ ,]+/);
@@ -26,7 +22,7 @@ let Game = React.createClass({
         } else {
           Actions.addName(val);
         }
-        React.findDOMNode(this.refs.roundField).value = '';
+        this.refs.roundField.value = '';
       }
     }    
   },

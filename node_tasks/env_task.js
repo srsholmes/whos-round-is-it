@@ -18,7 +18,7 @@ function getEnvironments() {
 }
 
 function getPackageFile() {
-	return `var app = require('./${buildEnv}/App.jsx');`;
+	return `var app = require('./${buildEnv}/appContainer');`;
 }
 
 function createFile() {

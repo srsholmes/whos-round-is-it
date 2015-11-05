@@ -1,1 +1,1 @@
-var app = require('./web/App.jsx');
+var app = require('./web/appContainer');
