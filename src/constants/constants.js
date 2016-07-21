@@ -1,4 +1,4 @@
-const LOCAL_STORAGE_KEY = `whosRoundIsIt`;
+	const LOCAL_STORAGE_KEY = `whosRoundIsIt`;
 const DRINKS = [`beer`, `wine`, 'shots', 'cocktails', 'champagne'];
 
 const PHRASES = {
