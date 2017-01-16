@@ -3,7 +3,7 @@ const DRINKS = [`beer`, `wine`, 'shots', 'cocktails', 'champagne'];
 
 const PHRASES = {
 	Entry: {
-		title: [`Fancy a drink?`, `Thirsty?`, `Pint?`, `Feeling parched?`, `What's your posion?`, 'Drink?', 'Choose a drink' ]
+		title: [`Fancy a drink?`, `Thirsty?`, `Pint?`, `Feeling parched?`, `What's your poison?`, 'Drink?', 'Choose a drink' ]
 	},
 	beer: {
 		title: `Who's a lad?`,
